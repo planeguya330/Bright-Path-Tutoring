@@ -113,7 +113,8 @@ nav a {
     padding-bottom: 3px;
 }
 
-nav a:hover, nav a.active {
+nav a:hover,
+nav a.active {
     color: #e9d8a6;
     border-bottom: 2px solid #e9d8a6;
 }
