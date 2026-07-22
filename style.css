@@ -1,3 +1,6 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
 /* Basic Reset */
 * {
     margin: 0;
@@ -6,10 +9,11 @@
 }
 
 body {
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    line-height: 1.6;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    line-height: 1.65;
     color: #1e293b;
-    background-color: #f8fafc;
+    /* Darkened slightly from off-white so the central card stands out clearly */
+    background-color: #e2e8f0; 
 }
 
 .container {
@@ -24,34 +28,36 @@ body {
 header {
     background: #1e3a8a; /* Deep navy blue */
     color: #ffffff;
-    padding-top: 35px;
-    padding-bottom: 25px;
+    padding-top: 45px;
+    padding-bottom: 30px;
     text-align: center;
-    border-bottom: #0d9488 4px solid; /* Teal border highlight */
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-bottom: #0d9488 5px solid; /* Teal border accent */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.4em;
-    letter-spacing: 0.5px;
+    font-size: 2.5em;
+    font-weight: 800;
+    letter-spacing: -0.5px;
 }
 
 header .subtitle {
     font-size: 1.1em;
-    margin-top: 6px;
-    color: #93c5fd; /* Soft sky blue */
+    margin-top: 8px;
+    color: #93c5fd;
+    font-weight: 500;
 }
 
 /* Navigation Styling */
 nav {
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 nav a {
-    color: #e2e8f0;
+    color: #cbd5e1;
     text-decoration: none;
-    margin: 0 12px;
+    margin: 0 14px;
     font-weight: 600;
     font-size: 1.05em;
     padding-bottom: 4px;
@@ -59,29 +65,31 @@ nav a {
 }
 
 nav a:hover, nav a.active {
-    color: #38bdf8; /* Accent light blue */
+    color: #38bdf8;
     border-bottom: 2px solid #38bdf8;
 }
 
-/* Main Content Styling (Increased top margin for spacing below header) */
+/* Main Content Box (Pushed down further for better visual balance) */
 main {
     background: #ffffff;
-    padding: 40px;
-    margin-top: 45px; /* Creates lower gap from title section */
-    margin-bottom: 45px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    border: 1px solid #e2e8f0;
+    padding: 45px 50px;
+    margin-top: 55px; /* Increased top gap from header */
+    margin-bottom: 60px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+    border: 1px solid #cbd5e1;
 }
 
 section {
-    margin-bottom: 35px;
+    margin-bottom: 40px;
 }
 
 h2 {
     color: #1e3a8a;
-    margin-bottom: 12px;
-    border-bottom: 2px solid #0d9488;
+    font-size: 1.6em;
+    font-weight: 700;
+    margin-bottom: 14px;
+    border-bottom: 3px solid #0d9488;
     display: inline-block;
     padding-bottom: 4px;
 }
@@ -93,16 +101,8 @@ p {
 
 /* Grey Placeholder Text Style */
 .placeholder {
-    color: #64748b; /* Soft slate grey */
+    color: #64748b;
     font-style: italic;
-}
-
-/* Image Handling */
-.responsive-img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-top: 15px;
 }
 
 /* Form Container for Google Form */
@@ -116,11 +116,12 @@ p {
 
 iframe {
     max-width: 100%;
+    border-radius: 8px;
 }
 
 /* Footer Styling */
 footer {
-    padding: 25px;
+    padding: 30px 20px;
     color: #94a3b8;
     background-color: #0f172a;
     text-align: center;
