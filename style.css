@@ -21,7 +21,7 @@ body {
 
 /* Header Styling */
 header {
-    background: #1e3a8a; /* Navy blue */
+    background: #1e3a8a; /* Deep Navy Blue */
     color: #ffffff;
     padding-top: 45px;
     padding-bottom: 30px;
@@ -124,7 +124,7 @@ p {
     border: 1px solid #cbd5e1;
 }
 
-/* Instructions Box */
+/* Instructions Box & Cards */
 .instructions-box {
     background: #ffffff;
     border: 2px solid #0d9488;
@@ -135,25 +135,56 @@ p {
 
 .instructions-box h3 {
     color: #1e3a8a;
-    font-size: 1.3em;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+}
+
+.step-card {
+    display: flex;
+    align-items: flex-start;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 15px 20px;
     margin-bottom: 15px;
 }
 
-.steps-list {
-    margin-left: 20px;
+.step-card.challenge {
+    background: #f0fdf4;
+    border-color: #22c55e;
 }
 
-.steps-list li {
-    margin-bottom: 12px;
+.step-num {
+    background: #1e3a8a;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 1.1em;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 18px;
+    flex-shrink: 0;
+}
+
+.step-card.challenge .step-num {
+    background: #16a34a;
+}
+
+.step-text {
     font-size: 1.05em;
+    line-height: 1.5;
 }
 
-.steps-list code {
-    background: #f1f5f9;
+.step-text code {
+    background: #e2e8f0;
     color: #0f766e;
     padding: 2px 6px;
     border-radius: 4px;
     font-weight: bold;
+    font-family: monospace;
 }
 
 /* Pricing Grid & Card Styling */
@@ -261,13 +292,13 @@ p {
     background-color: #cbd5e1;
 }
 
-/* Call to Action Banner */
-.cta-banner {
-    background: #1e3a8a;
-    color: #ffffff;
-    padding: 50px 20px;
+/* Call to Action Banner Override (Guarantees dark blue background) */
+section.cta-banner {
+    background-color: #1e3a8a !important;
+    color: #ffffff !important;
+    padding: 55px 20px;
     text-align: center;
-    border-top: 4px solid #0d9488;
+    border-top: 5px solid #0d9488;
 }
 
 .cta-content {
@@ -276,22 +307,24 @@ p {
 }
 
 .cta-content h3 {
-    font-size: 1.7em;
-    font-weight: 700;
-    margin-bottom: 10px;
+    font-size: 1.8em;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: #ffffff !important;
 }
 
 .cta-content p {
-    color: #cbd5e1;
-    font-size: 1.05em;
-    margin-bottom: 20px;
+    color: #cbd5e1 !important;
+    font-size: 1.1em;
+    margin-bottom: 25px;
 }
 
 .btn-cta {
     background-color: #0d9488;
-    color: #ffffff;
+    color: #ffffff !important;
     padding: 14px 28px;
-    font-size: 1em;
+    font-size: 1.05em;
+    border-radius: 8px;
 }
 
 .btn-cta:hover {
