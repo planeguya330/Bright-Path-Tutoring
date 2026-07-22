@@ -62,4 +62,6 @@ For questions or feedback, please reach out through GitHub Issues.
 
 ---
 
-**Happy Tutoring! 📚**
+**Happy Tutoring!**
+
+README made with AI
