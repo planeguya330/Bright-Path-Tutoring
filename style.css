@@ -1,6 +1,3 @@
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
-
 /* Basic Reset */
 * {
     margin: 0;
@@ -12,27 +9,26 @@ body {
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
     line-height: 1.65;
     color: #1e293b;
-    /* Darkened slightly from off-white so the central card stands out clearly */
-    background-color: #e2e8f0; 
+    /* Clean background color to separate header and content */
+    background-color: #f1f5f9; 
 }
 
 .container {
     width: 90%;
     max-width: 850px;
-    margin: auto;
-    overflow: hidden;
+    margin: 0 auto;
     padding: 0 20px;
 }
 
 /* Header Styling */
 header {
-    background: #1e3a8a; /* Deep navy blue */
+    background: #1e3a8a; /* Navy blue */
     color: #ffffff;
     padding-top: 45px;
     padding-bottom: 30px;
     text-align: center;
     border-bottom: #0d9488 5px solid; /* Teal border accent */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 
 header h1 {
@@ -69,14 +65,14 @@ nav a:hover, nav a.active {
     border-bottom: 2px solid #38bdf8;
 }
 
-/* Main Content Box (Pushed down further for better visual balance) */
+/* Main Content Box - Margin top creates explicit gap from header bar */
 main {
     background: #ffffff;
     padding: 45px 50px;
-    margin-top: 55px; /* Increased top gap from header */
-    margin-bottom: 60px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     border-radius: 14px;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
     border: 1px solid #cbd5e1;
 }
 
@@ -103,6 +99,144 @@ p {
 .placeholder {
     color: #64748b;
     font-style: italic;
+}
+
+/* Pricing Grid & Card Styling */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.pricing-card {
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 30px 25px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pricing-card.featured {
+    border-color: #0d9488;
+    background: #ffffff;
+    box-shadow: 0 10px 20px rgba(13, 148, 136, 0.1);
+}
+
+.pricing-card .badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0d9488;
+    color: #ffffff;
+    font-size: 0.8em;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.pricing-card h3 {
+    color: #1e3a8a;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.pricing-card .price {
+    font-size: 2.2em;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 15px;
+}
+
+.pricing-card .price span {
+    font-size: 0.45em;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.features-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 0.95em;
+}
+
+.features-list li:last-child {
+    border-bottom: none;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95em;
+    transition: all 0.2s ease;
+    margin-top: 15px;
+}
+
+.btn-primary {
+    background-color: #1e3a8a;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-secondary {
+    background-color: #e2e8f0;
+    color: #1e293b;
+}
+
+.btn-secondary:hover {
+    background-color: #cbd5e1;
+}
+
+/* Call to Action Banner */
+.cta-banner {
+    background: #1e3a8a;
+    color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+    border-top: 4px solid #0d9488;
+}
+
+.cta-content h3 {
+    font-size: 1.6em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.cta-content p {
+    color: #cbd5e1;
+    font-size: 1.05em;
+    margin-bottom: 20px;
+}
+
+.btn-cta {
+    background-color: #0d9488;
+    color: #ffffff;
+    padding: 14px 28px;
+    font-size: 1em;
+}
+
+.btn-cta:hover {
+    background-color: #0f766e;
 }
 
 /* Form Container for Google Form */
